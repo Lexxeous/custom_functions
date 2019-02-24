@@ -1,14 +1,7 @@
-// include necessary libraries
-#include <iostream>
-#include <string>
-#include <cmath>
-#include <cstdlib>
-#include <ctime>
-
 // include header file
 #include "cpp_funcs.h"
 
-// specify a namespace
+// define namespace
 using namespace std;
 
 //------------------------------------------------------------------------------------------
@@ -59,5 +52,20 @@ float range_rand_float(float low, float high)
   // do some funky offset math
   return (rand() / float (RAND_MAX) * (range - 1)) + low;
 }
+
+//------------------------------------------------------------------------------------------
+
+void remove_spaces(char* str) 
+{ 
+  int count = 0; // temporary variable to keep track of non-space character count 
+
+  // iterate through string, place at "count++" if not a space
+  for(int c = 0; str[c]; c++) 
+  {
+    if(str[c] != ' ') 
+      str[count++] = str[c]; // here "count" is incremented for each index
+  }
+  str[count] = '\0'; // put null terminator at the end
+} 
 
 //------------------------------------------------------------------------------------------

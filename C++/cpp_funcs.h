@@ -53,4 +53,13 @@ double range_rand_double(double low, double high);
 */
 float range_rand_float(float low, float high);
 
+
+/*
+	Purpose: Remove all spaces from a string and compress it
+	Inputs:  The string: char* <str>
+	Outputs: None
+*/
+void remove_spaces(char* str) 
+
+
 #endif //for CPP_FUNCS_H
